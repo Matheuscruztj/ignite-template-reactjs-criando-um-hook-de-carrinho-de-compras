@@ -8,6 +8,7 @@ import { useCart, CartProvider } from '../../hooks/useCart';
 const apiMock = new AxiosMock(api);
 
 jest.mock('react-toastify');
+jest.setTimeout(30000);
 
 const mockedToastError = toast.error as jest.Mock;
 const mockedSetItemLocalStorage = jest.spyOn(Storage.prototype, 'setItem');
